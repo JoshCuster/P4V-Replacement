@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RuleApplicationDef xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  Revision="1"
+  PublicRevision="1"
+  Guid="c34a7696-3b8c-4e8c-8354-376d4d74713d"
+  Id="-1"
+  Name="GitTest"
+  RepositoryAssemblyFileVersion="4.6.3.14788"
+  LastValidateContentCode="1269506009"
+  IsolatedTestDomain="false"
+  SchemaGuid="a2ba4c26-223c-47d7-be2c-ca589c4529c9"
+  SchemaRevision="1"
+  SchemaPublicRevision="1"
+  LastValidateDateTimeUtc="2018-02-21T19:59:30.3327194Z">
+  <UpgraderMessageList xmlns="http://www.inrule.com/XmlSchema/Schema" />
+  <RuntimeEngine xmlns="http://www.inrule.com/XmlSchema/Schema">InRule</RuntimeEngine>
+  <FeatureVersion xmlns="http://www.inrule.com/XmlSchema/Schema">76</FeatureVersion>
+  <CompatibilityVersion xmlns="http://www.inrule.com/XmlSchema/Schema">1</CompatibilityVersion>
+  <AuthoringSettings xmlns="http://www.inrule.com/XmlSchema/Schema">
+    <SelectedAuthoringItemGuid>5d250fee-201c-46f8-8e96-48beca985a00</SelectedAuthoringItemGuid>
+    <UseAdvancedXmlOptions>false</UseAdvancedXmlOptions>
+    <AllowAccessToParentsInLanguageRules>true</AllowAccessToParentsInLanguageRules>
+    <TreeRuleNameVisibility>HideReserved</TreeRuleNameVisibility>
+    <CreatedDateTime>2018-02-21T14:55:09.0698492-05:00</CreatedDateTime>
+    <ModifiedDateTime>2018-02-21T14:59:38.6609693-05:00</ModifiedDateTime>
+  </AuthoringSettings>
+  <IndentUnboundCollectionXml xmlns="http://www.inrule.com/XmlSchema/Schema">true</IndentUnboundCollectionXml>
+  <AllowRuleInactivation xmlns="http://www.inrule.com/XmlSchema/Schema">true</AllowRuleInactivation>
+  <UseRuleVersions xmlns="http://www.inrule.com/XmlSchema/Schema">false</UseRuleVersions>
+  <UseVersionCreationDates xmlns="http://www.inrule.com/XmlSchema/Schema">true</UseVersionCreationDates>
+  <HasContextVersionSettings xmlns="http://www.inrule.com/XmlSchema/Schema">false</HasContextVersionSettings>
+  <RunawayCycleCount xmlns="http://www.inrule.com/XmlSchema/Schema">100000</RunawayCycleCount>
+  <Timeout xmlns="http://www.inrule.com/XmlSchema/Schema">30000</Timeout>
+  <Entities xmlns="http://www.inrule.com/XmlSchema/Schema">
+    <EntityDef
+      Revision="1"
+      PublicRevision="1"
+      Guid="5b26e61f-6f4f-493b-a1df-61b51fd6cda2"
+      Name="Rulemanager">
+      <RuleElements>
+        <RuleElementDef
+          xsi:type="RuleSetDef"
+          Revision="1"
+          PublicRevision="1"
+          Guid="5d250fee-201c-46f8-8e96-48beca985a00"
+          Name="RuleSet1">
+          <FireMode>Explicit</FireMode>
+          <RunMode>SequentialRunOnce</RunMode>
+          <Rules>
+            <RuleElementDef
+              xsi:type="SimpleRuleDef"
+              Revision="1"
+              PublicRevision="1"
+              Guid="f2b45f56-3d9a-4eb8-a8f8-0dda8d65fa3a"
+              Name="IfThen1">
+              <Condition
+                LastAuthoringView="BusinessLangauge">
+                <ReturnType>Boolean</ReturnType>
+                <FormulaText>IsNumeric(A) and IsNumeric(A + B)</FormulaText>
+              </Condition>
+              <SubRules>
+                <RuleElementDef
+                  xsi:type="FireNotificationActionDef"
+                  Revision="1"
+                  PublicRevision="1"
+                  Guid="ba3a0b65-a64a-4fbe-9bc2-3997ef8509e3"
+                  Name="FireNotification1">
+                  <NotificationType>Informational</NotificationType>
+                  <NotificationMessage>
+                    <FormulaParseFormat>Token</FormulaParseFormat>
+                    <FormulaText>A and B are numbers</FormulaText>
+                  </NotificationMessage>
+                </RuleElementDef>
+              </SubRules>
+              <HasContextVersionSettings>false</HasContextVersionSettings>
+            </RuleElementDef>
+          </Rules>
+          <HasContextVersionSettings>false</HasContextVersionSettings>
+        </RuleElementDef>
+      </RuleElements>
+      <Fields>
+        <FieldDef
+          Revision="1"
+          PublicRevision="1"
+          Guid="60a18fda-edef-4d48-9907-2d91e608241c"
+          Name="A"
+          DataType="Integer" />
+        <FieldDef
+          Revision="1"
+          PublicRevision="1"
+          Guid="d3a59d92-9acd-4c78-a665-b0e3404a0857"
+          Name="B"
+          DataType="Integer" />
+      </Fields>
+      <HasContextVersionSettings>false</HasContextVersionSettings>
+    </EntityDef>
+  </Entities>
+</RuleApplicationDef>
