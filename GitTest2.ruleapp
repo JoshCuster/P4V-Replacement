@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RuleApplicationDef xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  Revision="1"
+  PublicRevision="1"
+  Guid="00ad7960-22a8-496c-a160-bdd64869f178"
+  Id="-1"
+  Name="GitTest2"
+  RepositoryAssemblyFileVersion="4.6.3.14788"
+  LastValidateContentCode="97628311"
+  IsolatedTestDomain="false"
+  SchemaGuid="8d06c1f8-134e-4eba-8f0e-ae54a5da085e"
+  SchemaRevision="1"
+  SchemaPublicRevision="1"
+  LastValidateDateTimeUtc="2018-02-22T15:54:58.6748928Z">
+  <UpgraderMessageList xmlns="http://www.inrule.com/XmlSchema/Schema" />
+  <RuntimeEngine xmlns="http://www.inrule.com/XmlSchema/Schema">InRule</RuntimeEngine>
+  <FeatureVersion xmlns="http://www.inrule.com/XmlSchema/Schema">76</FeatureVersion>
+  <CompatibilityVersion xmlns="http://www.inrule.com/XmlSchema/Schema">1</CompatibilityVersion>
+  <AuthoringSettings xmlns="http://www.inrule.com/XmlSchema/Schema">
+    <SelectedAuthoringItemGuid>0fd93fc4-87be-4f33-8387-16c77eee2853</SelectedAuthoringItemGuid>
+    <UseAdvancedXmlOptions>false</UseAdvancedXmlOptions>
+    <AllowAccessToParentsInLanguageRules>true</AllowAccessToParentsInLanguageRules>
+    <TreeRuleNameVisibility>HideReserved</TreeRuleNameVisibility>
+    <CreatedDateTime>2018-02-22T10:51:14.9103888-05:00</CreatedDateTime>
+    <ModifiedDateTime>2018-02-22T10:56:18.4018928-05:00</ModifiedDateTime>
+  </AuthoringSettings>
+  <IndentUnboundCollectionXml xmlns="http://www.inrule.com/XmlSchema/Schema">true</IndentUnboundCollectionXml>
+  <AllowRuleInactivation xmlns="http://www.inrule.com/XmlSchema/Schema">true</AllowRuleInactivation>
+  <UseRuleVersions xmlns="http://www.inrule.com/XmlSchema/Schema">false</UseRuleVersions>
+  <UseVersionCreationDates xmlns="http://www.inrule.com/XmlSchema/Schema">true</UseVersionCreationDates>
+  <HasContextVersionSettings xmlns="http://www.inrule.com/XmlSchema/Schema">false</HasContextVersionSettings>
+  <RunawayCycleCount xmlns="http://www.inrule.com/XmlSchema/Schema">100000</RunawayCycleCount>
+  <Timeout xmlns="http://www.inrule.com/XmlSchema/Schema">30000</Timeout>
+  <Entities xmlns="http://www.inrule.com/XmlSchema/Schema">
+    <EntityDef
+      Revision="1"
+      PublicRevision="1"
+      Guid="bd0b34c7-c6e7-43ca-954c-c275be5efe6b"
+      Name="Engage">
+      <RuleElements>
+        <RuleElementDef
+          xsi:type="RuleSetDef"
+          Revision="1"
+          PublicRevision="1"
+          Guid="68d7b042-f2e3-421c-aaab-872cfd1f3bd2"
+          Name="RuleSet1">
+          <FireMode>Explicit</FireMode>
+          <RunMode>SequentialRunOnce</RunMode>
+          <Rules>
+            <RuleElementDef
+              xsi:type="SimpleRuleDef"
+              Revision="1"
+              PublicRevision="1"
+              Guid="f36d7a98-c8c8-4104-bd22-4c505f070e7a"
+              Name="IfThen1">
+              <Condition
+                LastAuthoringView="BusinessLangauge">
+                <ReturnType>Boolean</ReturnType>
+                <FormulaText>testfield1 = "Engageone"</FormulaText>
+              </Condition>
+              <SubRules>
+                <RuleElementDef
+                  xsi:type="FireNotificationActionDef"
+                  Revision="1"
+                  PublicRevision="1"
+                  Guid="0fd93fc4-87be-4f33-8387-16c77eee2853"
+                  Name="FireNotification1">
+                  <NotificationType>Informational</NotificationType>
+                  <NotificationMessage>
+                    <FormulaParseFormat>Token</FormulaParseFormat>
+                    <FormulaText>test1</FormulaText>
+                  </NotificationMessage>
+                </RuleElementDef>
+              </SubRules>
+              <HasContextVersionSettings>false</HasContextVersionSettings>
+            </RuleElementDef>
+          </Rules>
+          <HasContextVersionSettings>false</HasContextVersionSettings>
+        </RuleElementDef>
+      </RuleElements>
+      <Fields>
+        <FieldDef
+          Revision="1"
+          PublicRevision="1"
+          Guid="fe8eb099-4dc8-4ad5-9af5-843e7d92604d"
+          Name="testfield1"
+          DataType="String"
+          DisplayName="Testfield1" />
+      </Fields>
+      <HasContextVersionSettings>false</HasContextVersionSettings>
+    </EntityDef>
+  </Entities>
+</RuleApplicationDef>
